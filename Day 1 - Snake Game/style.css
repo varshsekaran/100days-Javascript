@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+    background-color: white;
+}
+canvas {
+    background-color:rgb(233, 227, 169);
+}
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color:brown;
+    border: none;
+    color: white;
+}
