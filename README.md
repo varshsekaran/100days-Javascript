@@ -1,1 +1,1 @@
-# 100days-Javascript
+# 100 days of Javascript code challenge
