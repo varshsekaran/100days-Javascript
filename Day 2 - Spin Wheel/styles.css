@@ -35,18 +35,17 @@ h3 {
     margin-right: 40px;
 }
 
-/* 🔹 Arrow Fix - Positioned Above the Wheel */
 .arrow {
     position: absolute;
-    top: -20px; /* Moves the arrow slightly above the wheel */
+    top: -20px; 
     left: 50%;
     transform: translateX(-50%);
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-bottom: 40px solid black; /* Increased size */
-    z-index: 10; /* Ensures arrow is visible */
+    border-bottom: 40px solid black;
+    z-index: 10; 
 }
 
 button {
