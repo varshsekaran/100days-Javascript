@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: #f4f4f4;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.wheel-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #222;
+    transition: transform 3s ease-out;
+    margin-right: 40px;
+}
+
+/* 🔹 Arrow Fix - Positioned Above the Wheel */
+.arrow {
+    position: absolute;
+    top: -20px; /* Moves the arrow slightly above the wheel */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid black; /* Increased size */
+    z-index: 10; /* Ensures arrow is visible */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#scoreDisplay {
+    font-size: 20px;
+    margin-top: 10px;
+}
