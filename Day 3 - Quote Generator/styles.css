@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 34px;
+    color:burlywood;
+}
+
+#quote {
+    font-size: 20px;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+#author {
+    font-size: 18px;
+    font-weight: bold;
+    color:black;
+}
+
+button {
+    background-color:burlywood;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+}
