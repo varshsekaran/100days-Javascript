@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #f4f4f4;
+}
+.container {
+    background: #D5E5D5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+input, button {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    margin-left: 100px;
+}
+button:hover {
+    background: #218838;
+}
+.result {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Loan Calculator</h2>
+        <label>Loan Amount ($):</label>
+        <input type="number" id="loanAmount" placeholder="Enter loan amount">
+        
+        <label>Annual Interest Rate (%):</label>
+        <input type="number" id="interestRate" placeholder="Enter interest rate">
+        
+        <label>Loan Term (Months):</label>
+        <input type="number" id="months" placeholder="Enter loan term">
+        
+        <button onclick="calculateLoan()">Calculate</button>
+        
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculateLoan() {
+            let loanAmount = parseFloat(document.getElementById("loanAmount").value);
+            let interestRate = parseFloat(document.getElementById("interestRate").value) / 100 / 12;
+            let months = parseInt(document.getElementById("months").value);
+            
+            if (isNaN(loanAmount) || isNaN(interestRate) || isNaN(months) || months <= 0) {
+                document.getElementById("result").innerHTML = "Please enter valid values.";
+                return;
+            }
+            
+            let monthlyPayment = (loanAmount * interestRate) / (1 - Math.pow(1 + interestRate, -months));
+            
+            document.getElementById("result").innerHTML = `Monthly Payment: $${monthlyPayment.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
